@@ -9,7 +9,9 @@ const m = multer({
 
 const routes = Router()
 
-routes.post('/user', controller.create)
-routes.post('/user/login', controller.login)
+routes.get('/products', controller.getList)
+routes.post('/products', controller.create)
+routes.put('/products/:id', controller.update)
+routes.delete('/products/:id', controller.deleteProduct)
 
 export default routes

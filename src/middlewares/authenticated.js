@@ -1,7 +1,7 @@
 import jwt from 'jwt-simple'
 import moment from 'moment'
 
-const secret = 'passwordAngelItpa'
+const secret = 'itpa2022'
 
 const ensureAuth = (req, res, next) => {
   if (!req.headers.authorization) {

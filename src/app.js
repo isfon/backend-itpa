@@ -2,6 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 
 import userRoutes from './users/routes'
+import productRoutes from './products/routes'
 
 const app = express()
 app.disable('x-powered-by')
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/', userRoutes)
+app.use('/', productRoutes)
 
 // root route
 app.get('/', (req, res) => {
